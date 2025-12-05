@@ -1,16 +1,19 @@
 using System;
 
-class URI
+public class Program
 {
-
-    static void Main(string[] args)
+    public static void Main()
     {
+        string linha;
+        while ((linha = Console.ReadLine()) != null)
+        {
+            string[] valores = linha.Split(' ');
+            uint a = uint.Parse(valores[0]);
+            uint b = uint.Parse(valores[1]);
 
-        int t = int.Parse(Console.ReadLine());
-        int primeiro = 2 * (2 * t);
+            uint resultado = a ^ b;
 
-        Console.WriteLine(primeiro);
-
+            Console.WriteLine(resultado);
+        }
     }
-
 }
